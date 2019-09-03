@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Targated Selectors</title>
+    <style>
+      /* directly child */
+      div > p {
+        background: #ddd;
+      }
+
+      /* directly after */
+      div + p {
+        background: #333;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Lorem ipsum dolor sit.</p>
+      <ul>
+        <li>item 1</li>
+        <li><p>item 1</p></li>
+        <li>item 1</li>
+      </ul>
+      <p>Lorem ipsum dolor sit.</p>
+    </div>
+    <p>Lorem ipsum dolor sit.</p>
+  </body>
+</html>
