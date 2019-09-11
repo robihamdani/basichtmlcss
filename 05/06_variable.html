@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS variable</title>
+    <style>
+      :root {
+        --max-width: 1100px;
+        --primary-color: #333;
+        --secondary-color: skyblue;
+        --light-color: #f4f4f4;
+      }
+
+      .box {
+        --box-1-width: 1;
+        --box-2-width: 2;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.4em;
+        background: var(--light-color);
+      }
+
+      header {
+        background: var(--primary-color);
+        border-bottom: 5px var(--secondary-color) solid;
+        color: #f4f4f4;
+        text-align: center;
+      }
+
+      .container {
+        display: flex;
+        margin: auto;
+        max-width: var(--max-width);
+      }
+
+      .box {
+        background-color: var(--primary-color);
+        border-bottom: 5px var(--secondary-color) solid;
+        color: #ffff;
+        padding: 1rem;
+        margin: 1rem;
+      }
+
+      .box-1 {
+        flex: var(--box-1-width);
+      }
+      .box-2 {
+        flex: var(--box-2-width);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Learn CSS variable</h1>
+    </header>
+
+    <div class="container">
+      <div class="box box-1">
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          quibusdam aliquid quia maxime, optio illo odio, laborum eos illum
+          error cum iure sunt ad animi culpa deleniti! Saepe, architecto
+          tempore?
+        </p>
+      </div>
+      <div class="box box-2">
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          quibusdam aliquid quia maxime, optio illo odio, laborum eos illum
+          error cum iure sunt ad animi culpa deleniti! Saepe, architecto
+          tempore?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
